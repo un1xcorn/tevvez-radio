@@ -1,0 +1,40 @@
+server: # REST and WS server
+  port: 1337
+  address: 0.0.0.0
+lavalink:
+  server:
+    password: "h4ck1ngb4s3d"
+    sources:
+      youtube: true
+      bandcamp: false
+      soundcloud: false
+      twitch: false
+      vimeo: false
+      http: false
+      local: false
+    bufferDurationMs: 400
+    frameBufferDurationMs: 5000
+    youtubePlaylistLoadLimit: 6
+    playerUpdateInterval: 5
+    youtubeSearchEnabled: false
+    soundcloudSearchEnabled: false
+    gc-warnings: false
+
+metrics:
+  prometheus:
+    enabled: false
+    endpoint: /metrics
+
+sentry:
+  dsn: ""
+  environment: ""
+
+logging:
+  file:
+    max-history: 30
+    max-size: 1GB
+  path: ./logs/
+
+  level:
+    root: ERROR
+    lavalink: ERROR
